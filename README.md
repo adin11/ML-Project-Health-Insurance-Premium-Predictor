@@ -1,5 +1,5 @@
-# ml-project-health-premium-prediction
-App Url = https://health-insurance-cost-estimator.streamlit.app/
+# ML-Project-Health-Premium-Prediction
+App Url = https://healthrate.onrender.com
 
 # Health Insurance Cost Predictor
 
