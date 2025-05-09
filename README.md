@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 ![banner](assets/banner.png)  
 Banner [source](https://banner.godori.dev/)
 
@@ -6,12 +5,12 @@ Banner [source](https://banner.godori.dev/)
 ![GitHub last commit](https://img.shields.io/github/last-commit/adin11/ml-project-health-premium-prediction)
 ![Type of ML](https://img.shields.io/badge/Type%20of%20ML-Regression-blue)
 ![License](https://img.shields.io/badge/License-MIT-green)
-[![Streamlit App](https://img.shields.io/badge/Deployed%20with-Streamlit-red)]()
+[![Streamlit App](https://img.shields.io/badge/Deployed%20with-render-purple)]()
 [![Open Source Love](https://badges.frapsoft.com/os/v1/open-source.svg?v=103)](https://github.com/ellerbrock/open-source-badges/)
 
-# 🩺 Health Insurance Premium Predictor
+# Health Insurance Premium Calculator:
 
-##### App Link:(https://healthrate.onrender.com)
+#### App Link:(https://healthrate.onrender.com)
 
 ---
 
@@ -96,7 +95,6 @@ Health insurance costs vary widely based on individual risk factors. This app us
 - Added domain-specific features resulted in more robust generalization.
 
 ---
-
 > 🚀 **Final solution: A dual-model XGBoost system optimized for different age groups, served through an interactive and responsive Streamlit app.**
 =======
 
