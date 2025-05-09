@@ -20,11 +20,11 @@ An intelligent, real-time health insurance premium predictor designed to help in
 ---
 
 ## 🔍 Business Problem:
-Health insurance costs vary widely based on individual risk factors. This app uses machine learning to generate accurate premium predictions, helping users plan ahead and understand how their personal and medical data affect insurance pricing.
+Rising health insurance costs have made it difficult for individuals to estimate how much they might need to pay each year. With premiums influenced by a range of personal factors—like age, medical history, and lifestyle—many people are left guessing. This project aims to bring clarity by offering a simple, data-driven tool that helps users understand what goes into their health insurance costs and what to expect financially.
 
 ---
 
-## Key Insights:
+## Business Relevant Insights:
 
 ### 1. Age-Based Segmentation
 - Users aged ≤25 showed higher variance in premium predictions.
