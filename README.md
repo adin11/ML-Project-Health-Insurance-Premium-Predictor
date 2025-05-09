@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ![banner](assets/banner.png)  
 Banner [source](https://banner.godori.dev/)
 
@@ -97,4 +98,5 @@ Health insurance costs vary widely based on individual risk factors. This app us
 ---
 
 > 🚀 **Final solution: A dual-model XGBoost system optimized for different age groups, served through an interactive and responsive Streamlit app.**
+=======
 
