@@ -10,13 +10,12 @@ Banner [source](https://banner.godori.dev/)
 
 # Health Insurance Premium Calculator:
 
-#### App Link:(https://healthrate.onrender.com)
+#### App Link: (https://healthrate.onrender.com)
 
 ---
 
 ## Overview:
-An intelligent, real-time health insurance premium predictor designed to help individuals estimate their annual premiums based on their health conditions, age, income, and more. Powered by XGBoost and built with an interactive Streamlit interface for instant predictions. Enables better financial planning and awareness of health-related costs.
-
+An intelligent, real-time health insurance premium predictor designed to help individuals estimate their annual premiums based on their health conditions, age, income, and more. Get Realtime Insurance estimations using this app/project.
 ---
 
 ## 🔍 Business Problem:
@@ -26,23 +25,44 @@ Rising health insurance costs have made it difficult for individuals to estimate
 
 ## Business Relevant Insights:
 
-### 1. Age-Based Segmentation
-- Users aged ≤25 showed higher variance in premium predictions.
-- Introduced segmented modeling to improve accuracy by age group.
+### 1. Age Column
+![line chart](assets/age.png)
 
-### 2. Feature Engineering:
-- Custom `risk_score` derived from medical history.
-- `genetical_risk` introduced to reduce error in younger users.
-- Age-based segmentation yielded performance uplift.
+** **
 
-### 3. Error Analysis:
-- Margin of Error calculations showed most variance in younger demographics.
-- Model was adapted to address outlier impact.
+### 2. BMI Column:
+![bmigraph](assets/bmi.png)
 
-### 4. Feature Importance:
-- XGBoost model revealed income, medical history, and risk_score as top predictors.
+** **
 
----
+### 3. Income Level:
+![incomelevel](assets/income level.png)
+** **
+
+### 4. Employemnt status and insurance plan :
+![esi](assets/insure.png)
+** **
+
+### 5. Premium Income Ratio:
+![medical](assets/pri.png)
+** **
+
+### 6. Region:
+![esi](assets/region.png)
+** **
+
+### 7. Smoking Status:
+![esi](assets/smoke.png)
+** **
+
+
+### 7. Employemnt status and insurance plan :
+![esi](assets/insure.png)
+** **
+
+
+--- 
+
 
 ## ⚙️ Tech Stack:
 - Python (3.10+)
