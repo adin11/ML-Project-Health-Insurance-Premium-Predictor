@@ -33,35 +33,45 @@ Rising health insurance costs have made it difficult for individuals to estimate
 
 ## Key Insights:
 
-### 1. Age Column :
+### 1. Age vs Premium:
 ![line chart](assets/age.png)
 
-** **
 
-### 2. BMI Column :
+**This Line chart shows how the premium costs varies across different age groups.Younger individuals tend to pay lower insurance premiums, whereas premiums significantly increase with age.**
+
+### 2. BMI Category Impact:
 ![bmigraph](assets/bmi.png)
 
-** **
 
-### 3. Income Level :
+**Insurance premiums are higher for individuals classified as Overweight or Obese, while those with a Normal or Underweight BMI enjoy lower premium rates.**
+
+### 3. Income Level Distribution:
 ![incomelevel](assets/income.png)
-** **
 
-### 4. Employemnt status and insurance plan :
+
+**A majority (38%) of policyholders have an income below ₹10 lakhs. Only 16% of policy holders have income more than ₹30 lakhs.**
+
+
+### 4. Employemnt Type & Insurance Plan:
 ![esi](assets/insure.png)
-** **
 
-### 5. Premium Income Ratio :
+**Freelancers have the highest average income, followed by Self-Employed and then Salaried professionals. Most Gold plans are opted for by the Self-Employed, Silver by Freelancers, and Bronze by Salaried individuals.**
+
+### 5. Premium Income Ratio [PIR]:
 ![medical](assets/pri.png)
-** **
 
-### 6. Region :
+
+**The Premium Income Ratio indicates a persons income towards their insurance premium. For age groups less than 40 PIR is less meaning the premium is more affordable, For people with more than 40 Age the PIR is High indicating higher insurance costs with respect to their income.**
+
+### 6. Region Policy Distribution:
 ![esi](assets/region.png)
-** **
 
-### 7. Smoking Status :
+**The Southeast region accounts for the highest share of policies (35%), followed by Southwest (33%), Northwest (20%), and Northeast (14%).**
+
+### 7. Smoking Habits & Premium Costs:
 ![esi](assets/smoke.png)
-** **
+
+**Regular smokers pay significantly higher premiums, followed by occasional smokers. Non-smokers benefit from the lowest premium rates.**
 
 --- 
 
