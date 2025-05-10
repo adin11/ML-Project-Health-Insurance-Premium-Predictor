@@ -10,18 +10,19 @@ Banner [source](https://banner.godori.dev/)
 
 # Health Insurance Premium Calculator:
 
-### App Link: (https://healthrate.onrender.com)
-### Power BI Dasboard Link: (https://app.powerbi.onrender.com)
+##### App Link: [Healthrate - Live Insurance Premium Estimator](https://healthrate.onrender.com)
+##### Dashboard Link: [Power BI Dashboard](https://app.powerbi.onrender.com)
 
----
-
-## Overview:
-An intelligent, real-time health insurance premium predictor designed to help individuals estimate their annual premiums based on their health conditions, age, income, and more. Get Realtime Insurance estimations using this project.
 
 ---
 
 ## 🔍 Business Problem:
 Rising health insurance costs have made it difficult for individuals to estimate how much they might need to pay each year. With premiums influenced by a range of personal factors—like age, medical history, and lifestyle—many people are left guessing. This project aims to bring clarity by offering a simple, data-driven tool that helps users understand what goes into their health insurance costs and what to expect financially.
+
+--- 
+
+## Overview:
+An intelligent, real-time health insurance premium predictor designed to help individuals estimate their annual premiums based on their health conditions, age, income, and more. Get Realtime Insurance estimations using this project.
 
 ---
 
