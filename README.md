@@ -107,7 +107,7 @@ Rising health insurance costs have made it difficult for individuals to estimate
 - Trained Linear, Ridge, and XGBoost regressors.
 - XGBoost selected for best R² performance (0.98).
 
-### Model Segmentation
+### 🔀 Model Segmentation
 -- Showed Significant error margin (16%) for younger age groups.
 -- Trained another model consisting of age groups less than 25.
 
