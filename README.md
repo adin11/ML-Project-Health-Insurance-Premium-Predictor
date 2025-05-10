@@ -10,13 +10,8 @@ Banner [source](https://banner.godori.dev/)
 
 # Health Insurance Premium Calculator:
 
-#### App Link: (https://healthrate.onrender.com)
-
---- 
-
-### BI Dashboard:
-![dashboard](assets/dashboard.png)
-** **
+### App Link: (https://healthrate.onrender.com)
+### Power BI Dasboard Link: (https://app.powerbi.onrender.com)
 
 ---
 
@@ -30,19 +25,25 @@ Rising health insurance costs have made it difficult for individuals to estimate
 
 ---
 
-## Business Relevant Insights:
+## Power BI Dashboard:
+![dashboard](assets/dashboard.png)
+**A Real-Time Dynamic Power Bi Dashboard for Analyzing How Health Insurance Premiums Differes from regions, Health,employment somking status etc.**
 
-### 1. Age Column
+--- 
+
+## Key Insights:
+
+### 1. Age Column :
 ![line chart](assets/age.png)
 
 ** **
 
-### 2. BMI Column:
+### 2. BMI Column :
 ![bmigraph](assets/bmi.png)
 
 ** **
 
-### 3. Income Level:
+### 3. Income Level :
 ![incomelevel](assets/income.png)
 ** **
 
@@ -50,15 +51,15 @@ Rising health insurance costs have made it difficult for individuals to estimate
 ![esi](assets/insure.png)
 ** **
 
-### 5. Premium Income Ratio:
+### 5. Premium Income Ratio :
 ![medical](assets/pri.png)
 ** **
 
-### 6. Region:
+### 6. Region :
 ![esi](assets/region.png)
 ** **
 
-### 7. Smoking Status:
+### 7. Smoking Status :
 ![esi](assets/smoke.png)
 ** **
 
