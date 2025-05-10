@@ -27,76 +27,77 @@ Rising health insurance costs have made it difficult for individuals to estimate
 
 ## Power BI Dashboard:
 ![dashboard](assets/dashboard.png)
-**A Real-Time Dynamic Power Bi Dashboard for Analyzing How Health Insurance Premiums Differes from regions, Health,employment somking status etc.**
+**A Real-Time Dynamic Power Bi Dashboard for Analyzing How Health Insurance Premiums Differes from regions, Health,employment smoking status etc.**
 
 --- 
 
-## Key Insights:
+# Key Insights:
 
-### 1. Age vs Premium:
+## 1. Age vs Premium:
 ![line chart](assets/age.png)
 
 
 **This Line chart shows how the premium costs varies across different age groups.Younger individuals tend to pay lower insurance premiums, whereas premiums significantly increase with age.**
 
-### 2. BMI Category Impact:
+## 2. BMI Category Impact:
 ![bmigraph](assets/bmi.png)
 
 
 **Insurance premiums are higher for individuals classified as Overweight or Obese, while those with a Normal or Underweight BMI enjoy lower premium rates.**
 
-### 3. Income Level Distribution:
+## 3. Income Level Distribution:
 ![incomelevel](assets/income.png)
 
 
 **A majority (38%) of policyholders have an income below ₹10 lakhs. Only 16% of policy holders have income more than ₹30 lakhs.**
 
 
-### 4. Employemnt Type & Insurance Plan:
+## 4. Employemnt Type & Insurance Plan:
 ![esi](assets/insure.png)
 
 **Freelancers have the highest average income, followed by Self-Employed and then Salaried professionals. Most Gold plans are opted for by the Self-Employed, Silver by Freelancers, and Bronze by Salaried individuals.**
 
-### 5. Premium Income Ratio [PIR]:
+## 5. Premium Income Ratio [PIR]:
 ![medical](assets/pri.png)
 
 
 **The Premium Income Ratio indicates a persons income towards their insurance premium. For age groups less than 40 PIR is less meaning the premium is more affordable, For people with more than 40 Age the PIR is High indicating higher insurance costs with respect to their income.**
 
-### 6. Region Policy Distribution:
+## 6. Region Policy Distribution:
 ![esi](assets/region.png)
 
 **The Southeast region accounts for the highest share of policies (35%), followed by Southwest (33%), Northwest (20%), and Northeast (14%).**
 
-### 7. Smoking Habits & Premium Costs:
+## 7. Smoking Habits & Premium Costs:
 ![esi](assets/smoke.png)
 
 **Regular smokers pay significantly higher premiums, followed by occasional smokers. Non-smokers benefit from the lowest premium rates.**
 
 --- 
 
-## ⚙️ Tech Stack:
+# ⚙️ Tech Stack:
 - Python (3.10+)
 - Pandas, NumPy, Matplotlib, Seaborn
 - Scikit-learn, XGBoost
-- Streamlit (for UI & deployment)
+- Streamlit (UI)
 - RandomizedSearchCV (for model tuning)
+- Render (Deployment) 
 
 ---
 
-## 🧪 Methods:
+## Methods:
 
 ### 📥 Data Preprocessing
-- Cleaned dataset and isolated `X` and `y` to avoid leakage.
-- Applied pipelines independently to test/train splits.
+- Dropped null values and handled duplicates, fixed column values datatypes etc.
+- Plotted Box plots for visualizing outliers and dropped some outliers by domain knowledge.
 
 ### 📊 EDA
 - Histograms, box plots used for univariate analysis.
-- Scatter plots and cross-tabs for bivariate insights.
+- BarPlots, scatter plots and cross-tabs for bivariate insights.
 
 ### 🧠 Feature Engineering
-- Created `risk_score` from domain-specific medical history.
-- Encoded categorical features via One-Hot and Label Mapping.
+- Created `risk_score` feature from domain-specific medical history column.
+- Encoded categorical features via One-Hot and Manual Label Mapping.
 
 ### 🧮 Feature Selection & Scaling
 - Dropped multicollinear features using VIF.
@@ -106,24 +107,27 @@ Rising health insurance costs have made it difficult for individuals to estimate
 - Trained Linear, Ridge, and XGBoost regressors.
 - XGBoost selected for best R² performance (0.98).
 
-### 🛠️ Model Tuning & Segmentation
+### Model Segmentation
+-- Showed Significant error margin (16%) for younger age groups.
+-- Trained another model consisting of age groups less than 25.
+
+### 🛠️ Model Tuning
 - Used RandomizedSearchCV for hyperparameter optimization.
-- Built two models: one for ≤25, one for >25 age group.
 
 ---
 
 ## 📈 Evaluation Metrics
 - **R² Score (XGBoost):** 0.98  
-- **Error Margin:** Minimized after age-wise segmentation  
-- **Feature Impact:** Income, risk_score, and genetical_risk were most influential  
-- **Model Strategy:** Balanced simplicity with high accuracy for real-world usability
+- **Error Margin:** Minimized after age-wise segmentation.  
+- **Feature Impact:** Income, risk_score, and genetical_risk were most influential features.
+- **Model Strategy:** For Real Time Predictions, If the selected age is over 25, it uses one model to show results. If it's above 25 it uses a different model.
 
 ---
 
-## 📌 Key Findings:
+## 📌 Top Conclusions:
 - Premiums are strongly influenced by medical history and income level.
 - Segmented model approach significantly improved younger user predictions.
-- Added domain-specific features resulted in more robust generalization.
+- Adding domain-specific features resulted in a more generalized model.
 
 ---
 > 🚀 **Final solution: A dual-model XGBoost system optimized for different age groups, served through an interactive and responsive Streamlit app.**
