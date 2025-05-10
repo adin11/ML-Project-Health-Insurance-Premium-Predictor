@@ -15,8 +15,8 @@ Banner [source](https://banner.godori.dev/)
 ---
 
 ## Overview:
----
-An intelligent, real-time health insurance premium predictor designed to help individuals estimate their annual premiums based on their health conditions, age, income, and more. Get Realtime Insurance estimations using this app/project.
+An intelligent, real-time health insurance premium predictor designed to help individuals estimate their annual premiums based on their health conditions, age, income, and more. Get Realtime Insurance estimations using this project.
+
 ---
 
 ## 🔍 Business Problem:
