@@ -12,6 +12,12 @@ Banner [source](https://banner.godori.dev/)
 
 #### App Link: (https://healthrate.onrender.com)
 
+--- 
+
+### BI Dashboard:
+![dashboard](assets/dashboard.png)
+** **
+
 ---
 
 ## Overview:
@@ -56,14 +62,7 @@ Rising health insurance costs have made it difficult for individuals to estimate
 ![esi](assets/smoke.png)
 ** **
 
-
-### 7. Employemnt status and insurance plan :
-![esi](assets/insure.png)
-** **
-
-
 --- 
-
 
 ## ⚙️ Tech Stack:
 - Python (3.10+)
