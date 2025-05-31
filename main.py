@@ -59,7 +59,7 @@ with row4[1]:
 with row4[2]:
     medical_history = st.selectbox('Medical History', categorical_options['Medical History'])
 
-# Create a dictionary for input values
+# Create a dictionary for input values entered by the user.
 input_dict = {
     'Age': age,
     'Number of Dependants': number_of_dependants,
@@ -79,6 +79,7 @@ input_dict = {
 if st.button('Predict'):
     prediction = predict(input_dict)
     st.success(f'Predicted Health Insurance Cost: ₹{prediction}')
+
 
 # Add a custom hamburger icon to replace the current header button
 st.markdown("""

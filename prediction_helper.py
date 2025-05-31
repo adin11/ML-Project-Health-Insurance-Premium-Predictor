@@ -31,6 +31,7 @@ def calculate_normalized_risk(medical_history):
 
 def preprocess_input(input_dict):
     # Define the expected columns and initialize the DataFrame with zeros
+    
     expected_columns = [
         'age', 'number_of_dependants', 'income_lakhs', 'insurance_plan', 'genetical_risk', 'normalized_risk_score',
         'gender_Male', 'region_Northwest', 'region_Southeast', 'region_Southwest', 'marital_status_Unmarried',
