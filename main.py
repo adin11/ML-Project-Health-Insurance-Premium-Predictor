@@ -2,8 +2,8 @@ import streamlit as st
 from prediction_helper import predict
 
 # Define the page layout
-st.set_page_config(page_title="Health Insurance Cost Predictor", layout="wide")  # Set app title and layout
-st.title('Health Insurance Cost Predictor')
+st.set_page_config(page_title="Health Rate", layout="wide")  # Set app title and layout
+st.title('Health Premium Estimator')
 
 # Adding a subheader
 st.subheader("Predict your health insurance costs based on various factors.")
