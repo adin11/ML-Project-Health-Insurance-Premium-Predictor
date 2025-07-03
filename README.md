@@ -9,10 +9,11 @@ Banner [source](https://banner.godori.dev/)
 [![Open Source Love](https://badges.frapsoft.com/os/v1/open-source.svg?v=103)](https://github.com/ellerbrock/open-source-badges/)
 
 # Health Insurance Premium Calculator:
-
 ##### App Link: [Healthrate - Live Insurance Premium Estimator](https://healthrate.onrender.com)
-##### Dashboard Link: [Power BI Dashboard](https://app.powerbi.onrender.com)
 
+---
+## Demo
+https://github.com/user-attachments/assets/17aadca1-34b6-4559-b12a-8fbe5a0c9e92
 
 ---
 
