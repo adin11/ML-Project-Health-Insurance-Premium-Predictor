@@ -7,12 +7,17 @@
 ---
 
 ## 🔍 Business Problem:
-Rising health insurance costs have made it difficult for individuals to estimate how much they might need to pay each year. With premiums influenced by a range of personal factors—like age, medical history, and lifestyle—many people are left guessing. This project aims to bring clarity by offering a simple, data-driven tool that helps users understand what goes into their health insurance costs and what to expect financially.
+Rising health insurance costs have made it difficult for individuals to estimate how much they might need to pay each year. With premiums influenced by a range of personal factors—like age, medical history, and lifestyle—many people are left guessing. In this project we will aim to solve this problem to bring clarity among individuals of differet age groups/health conditions etc.
 
 ---
 
 ## Overview:
-An intelligent, real-time health insurance premium predictor designed to help individuals estimate their annual premiums based on their health conditions, age, income, and more. Get Realtime Insurance estimations using this project.
+Developed an intelligent, real-time health insurance premium predictor designed to help individuals estimate their annual premiums based on their health conditions, age, income, and more. Get Realtime Insurance estimations using this tool. Built using a Fine tuned XG-Boost Model with high accuracy.
+
+---
+
+## Demo
+https://github.com/user-attachments/assets/17aadca1-34b6-4559-b12a-8fbe5a0c9e92
 
 ---
 
@@ -21,6 +26,43 @@ An intelligent, real-time health insurance premium predictor designed to help in
 **A Real-Time Dynamic Power Bi Dashboard for Analyzing How Health Insurance Premiums Differes from regions, Health,employment smoking status etc.**
 
 --- 
+
+## Technical Details:
+
+### 📊 EDA
+- Histograms, box plots used for univariate analysis.
+- BarPlots, scatter plots and cross-tabs for bivariate insights.
+
+### 🧠 Feature Engineering
+- Created `risk_score` feature from domain-specific medical history column.
+- Encoded categorical features via One-Hot encoding and Manual Label Mapping.
+
+### 🧮 Encoding & Scaling
+- Dropped multicollinear features using variance inflation factor.
+- Scaled the numeric features using min/max scaling.
+
+### 🤖 Model Development
+- Trained Linear, Ridge, and XGBoost regressors.
+- Finalized and Fine tuned XGBoost model using randomized search cv best R² score/test_set_score (0.98) and root mean sqaured error (1169).
+
+### 🔀 Model Segmentation
+- Identified that ~30% of predictions in younger age groups (≤ 25) had error margins exceeding 10%, leading to potential overcharging or undercharging.
+- Introduced an additional feature (`genetical_risk_score`) for these groups to reduce extreme errors.
+- Trained and saved two separate models for age groups ≤ 25 and > 25 using joblib.
+
+### 🛠️ Model Tuning
+- Used RandomizedSearchCV for hyperparameter optimization and trained the final model on these hyperparamters
+Best Parameters:  {'n_estimators': 50, 'max_depth': 5, 'learning_rate': 0.1}
+
+---
+
+## 📈 Evaluation Metrics
+- **R² Score (XGBoost):** 0.98  
+- **Error Margin:** Minimized after age-wise segmentation.  
+- **Feature Impact:** Income, risk_score, and genetical_risk were most influential features.
+- **Model Strategy:** For Real Time Predictions, If the selected age is over 25, it uses one model to show results. If it's above 25 it uses a different model.
+
+---
 
 # Key Insights:
 
@@ -76,42 +118,6 @@ An intelligent, real-time health insurance premium predictor designed to help in
 
 ---
 
-## Technical Details:
-
-### 📊 EDA
-- Histograms, box plots used for univariate analysis.
-- BarPlots, scatter plots and cross-tabs for bivariate insights.
-
-### 🧠 Feature Engineering
-- Created `risk_score` feature from domain-specific medical history column.
-- Encoded categorical features via One-Hot encoding and Manual Label Mapping.
-
-### 🧮 Encoding & Scaling
-- Dropped multicollinear features using variance inflation factor.
-- Scaled the numeric features using min/max scaling.
-
-### 🤖 Model Development
-- Trained Linear, Ridge, and XGBoost regressors.
-- Finalized and Fine tuned XGBoost model using randomized search cv best R² score/test_set_score (0.98) and root mean sqaured error (1169).
-
-### 🔀 Model Segmentation
-- Identified that ~30% of predictions in younger age groups (≤ 25) had error margins exceeding 10%, leading to potential overcharging or undercharging.
-- Introduced an additional feature (`genetical_risk_score`) for these groups to reduce extreme errors.
-- Trained and saved two separate models for age groups ≤ 25 and > 25 using joblib.
-
-### 🛠️ Model Tuning
-- Used RandomizedSearchCV for hyperparameter optimization and trained the final model on these hyperparamters
-Best Parameters:  {'n_estimators': 50, 'max_depth': 5, 'learning_rate': 0.1}
-
----
-
-## 📈 Evaluation Metrics
-- **R² Score (XGBoost):** 0.98  
-- **Error Margin:** Minimized after age-wise segmentation.  
-- **Feature Impact:** Income, risk_score, and genetical_risk were most influential features.
-- **Model Strategy:** For Real Time Predictions, If the selected age is over 25, it uses one model to show results. If it's above 25 it uses a different model.
-
----
 
 ## 📌 Top Conclusions:
 - Premiums are strongly influenced by medical history and income level.
@@ -119,5 +125,3 @@ Best Parameters:  {'n_estimators': 50, 'max_depth': 5, 'learning_rate': 0.1}
 - Adding domain-specific features resulted in a more generalized model.
 
 ---
-> 🚀 **Final solution: A dual-model XGBoost system optimized for different age groups, served through an interactive and responsive Streamlit app.**
-
