@@ -1,27 +1,18 @@
 ![banner](assets/banner.png)  
-Banner [source](https://banner.godori.dev/)
 
-![Python version](https://img.shields.io/badge/Python%20version-3.10%2B-lightgrey)
-![GitHub last commit](https://img.shields.io/github/last-commit/adin11/ml-project-health-premium-prediction)
-![Type of ML](https://img.shields.io/badge/Type%20of%20ML-Regression-blue)
-![License](https://img.shields.io/badge/License-MIT-green)
-[![Streamlit App](https://img.shields.io/badge/Deployed%20with-render-purple)]()
-[![Open Source Love](https://badges.frapsoft.com/os/v1/open-source.svg?v=103)](https://github.com/ellerbrock/open-source-badges/)
+# Health Rate - Your Health Insurance Premium Calculator
 
-# Health Insurance Premium Calculator:
-
-### App Link: (https://healthrate.onrender.com)
-### Power BI Dasboard Link: (https://app.powerbi.onrender.com)
-
----
-
-## Overview:
-An intelligent, real-time health insurance premium predictor designed to help individuals estimate their annual premiums based on their health conditions, age, income, and more. Get Realtime Insurance estimations using this project.
+### App Link: [Health Rate](https://healthrate.onrender.com)
 
 ---
 
 ## 🔍 Business Problem:
 Rising health insurance costs have made it difficult for individuals to estimate how much they might need to pay each year. With premiums influenced by a range of personal factors—like age, medical history, and lifestyle—many people are left guessing. This project aims to bring clarity by offering a simple, data-driven tool that helps users understand what goes into their health insurance costs and what to expect financially.
+
+---
+
+## Overview:
+An intelligent, real-time health insurance premium predictor designed to help individuals estimate their annual premiums based on their health conditions, age, income, and more. Get Realtime Insurance estimations using this project.
 
 ---
 
@@ -77,7 +68,7 @@ Rising health insurance costs have made it difficult for individuals to estimate
 
 # ⚙️ Tech Stack:
 - Python (3.10+)
-- Pandas, NumPy, Matplotlib, Seaborn
+- Pandas, NumPy, Matplotlib, Seaborn, variance inflation factor
 - Scikit-learn, XGBoost
 - Streamlit (UI)
 - RandomizedSearchCV (for model tuning)
@@ -85,11 +76,7 @@ Rising health insurance costs have made it difficult for individuals to estimate
 
 ---
 
-## Methods:
-
-### 📥 Data Preprocessing
-- Dropped null values and handled duplicates, fixed column values datatypes etc.
-- Plotted Box plots for visualizing outliers and dropped some outliers by domain knowledge.
+## Technical Details:
 
 ### 📊 EDA
 - Histograms, box plots used for univariate analysis.
@@ -97,22 +84,24 @@ Rising health insurance costs have made it difficult for individuals to estimate
 
 ### 🧠 Feature Engineering
 - Created `risk_score` feature from domain-specific medical history column.
-- Encoded categorical features via One-Hot and Manual Label Mapping.
+- Encoded categorical features via One-Hot encoding and Manual Label Mapping.
 
-### 🧮 Feature Selection & Scaling
-- Dropped multicollinear features using VIF.
-- Applied Min-Max scaling for consistent range.
+### 🧮 Encoding & Scaling
+- Dropped multicollinear features using variance inflation factor.
+- Scaled the numeric features using min/max scaling.
 
 ### 🤖 Model Development
 - Trained Linear, Ridge, and XGBoost regressors.
-- XGBoost selected for best R² performance (0.98).
+- Finalized and Fine tuned XGBoost model using randomized search cv best R² score/test_set_score (0.98) and root mean sqaured error (1169).
 
 ### 🔀 Model Segmentation
--- Showed Significant error margin (16%) for younger age groups.
--- Trained another model consisting of age groups less than 25.
+- Identified that ~30% of predictions in younger age groups (≤ 25) had error margins exceeding 10%, leading to potential overcharging or undercharging.
+- Introduced an additional feature (`genetical_risk_score`) for these groups to reduce extreme errors.
+- Trained and saved two separate models for age groups ≤ 25 and > 25 using joblib.
 
 ### 🛠️ Model Tuning
-- Used RandomizedSearchCV for hyperparameter optimization.
+- Used RandomizedSearchCV for hyperparameter optimization and trained the final model on these hyperparamters
+Best Parameters:  {'n_estimators': 50, 'max_depth': 5, 'learning_rate': 0.1}
 
 ---
 
@@ -131,5 +120,4 @@ Rising health insurance costs have made it difficult for individuals to estimate
 
 ---
 > 🚀 **Final solution: A dual-model XGBoost system optimized for different age groups, served through an interactive and responsive Streamlit app.**
-=======
 
